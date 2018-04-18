@@ -14,6 +14,6 @@
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TheParrot" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="com.theparrot.controller.TheParrot"  name="TheParrot" />
+  <jfx:javafx-desc width="800" height="600" main-class="com.theparrot.controller.TheParrot" name="TheParrot" />
   <update check="always"/>
 </jnlp>
