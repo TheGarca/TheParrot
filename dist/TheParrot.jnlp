@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="TheParrot.jar" size="4774" download="eager" />
+    <jar href="TheParrot.jar" size="4954" download="eager" />
     <jar href="lib/jfoenix-9.0.1.jar" size="2143605" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TheParrot" >
