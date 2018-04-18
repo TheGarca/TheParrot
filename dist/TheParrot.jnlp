@@ -8,12 +8,12 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="TheParrot.jar" size="4767" download="eager" />
+    <jar href="TheParrot.jar" size="4774" download="eager" />
     <jar href="lib/jfoenix-9.0.1.jar" size="2143605" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TheParrot" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc width="800" height="600" main-class="com.theparrot.controller.TheParrot" name="TheParrot" />
+  <jfx:javafx-desc  width="800" height="600" main-class="com.theparrot.controller.TheParrot"  name="TheParrot" />
   <update check="always"/>
 </jnlp>
