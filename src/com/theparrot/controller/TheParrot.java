@@ -19,7 +19,11 @@ public class TheParrot extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+<<<<<<< HEAD
         Parent root = FXMLLoader.load(getClass().getResource("./../view/Login.fxml"));
+=======
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
+>>>>>>> bd8374d8c175b9994fcc320e14b33d979b44af83
         
         Scene scene = new Scene(root);
         

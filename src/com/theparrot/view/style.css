@@ -1,7 +1,8 @@
 .background-color{
     background-color: #b4c1bb;
 }
-
-
-
+.head-background
+{
+    -fx-background-color: linear-gradient(to left,#795AF3 ,#3929E0);
+}
 
