@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="990.0" style="-fx-background-color: rgba(0,0, 0, 0);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theparrot.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="990.0" style="-fx-background-color: rgba(0,0, 0, 0);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theparrot.controller.LoginController">
    <children>
       <AnchorPane layoutY="37.0" prefHeight="423.0" prefWidth="990.0" style="-fx-background-color: #fff; -fx-border-radius: 5em;">
          <children>
@@ -59,7 +59,7 @@
                      </font>
                   </JFXPasswordField>
                   <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="331.0" text="Button" />
-                  <JFXButton layoutX="186.0" layoutY="355.0" text="SignIn" />
+                  <JFXButton layoutX="186.0" layoutY="355.0" onAction="#login" text="SignIn" />
                   <Label layoutX="176.0" layoutY="38.0" text="SignIn" textFill="#7a5cf2">
                      <font>
                         <Font size="21.0" />

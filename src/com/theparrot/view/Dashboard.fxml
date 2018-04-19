@@ -26,7 +26,7 @@
                     <Font size="13.0" />
                 </font>
             </Label>
-            <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="PERFIL" textFill="WHITE">
+            <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#ShowPerfil" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="PERFIL" textFill="WHITE">
                 <font>
                     <Font name="System Bold" size="12.0" />
                 </font>
@@ -158,6 +158,7 @@
         </effect>
     </Pane>
 
-      <AnchorPane fx:id="content" prefHeight="436.0" prefWidth="810.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="146.0" />
+      <AnchorPane fx:id="content" prefHeight="436.0" prefWidth="810.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="146.0">
+        </AnchorPane>
 </children>
 </AnchorPane>

@@ -27,7 +27,7 @@ public class TheParrot extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
         stage.initStyle(StageStyle.TRANSPARENT);
         
         /*
