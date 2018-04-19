@@ -36,4 +36,17 @@ public class DashboardController implements Initializable {
         content.getChildren().setAll(root);
     }
 
+    @FXML
+    private void CadastroProjeto(ActionEvent event) throws Exception {
+
+        Parent root = FXMLLoader.load(getClass().getResource("../view/CadastroProjeto.fxml"));
+        content.getChildren().setAll(root);
+    }
+
+    @FXML
+    private void Time(ActionEvent event) throws Exception {
+
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Time.fxml"));
+        content.getChildren().setAll(root);
+    }
 }
