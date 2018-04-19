@@ -6,3 +6,5 @@
     -fx-background-color: linear-gradient(to left,#795AF3 ,#3929E0);
 }
 
+.root { -fx-background-color: transparent; }
+

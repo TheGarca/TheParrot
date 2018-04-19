@@ -5,11 +5,16 @@
  */
 package com.theparrot.controller;
 
+
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -17,18 +22,51 @@ import javafx.stage.Stage;
  */
 public class TheParrot extends Application {
     
+    public double xOffSet = 0;
+    public double yOffSet = 0;
+    
     @Override
     public void start(Stage stage) throws Exception {
-<<<<<<< HEAD
-        Parent root = FXMLLoader.load(getClass().getResource("./../view/Login.fxml"));
-=======
-        Parent root = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
->>>>>>> bd8374d8c175b9994fcc320e14b33d979b44af83
+        Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
+        stage.initStyle(StageStyle.TRANSPARENT);
+        
+        
+        
+        /*
+         * Moving frames
+        */
+        
+        root.setOnMousePressed(new EventHandler<MouseEvent> () {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffSet);
+                stage.setY(event.getScreenY() - yOffSet);
+            }
+        });
+        
+        root.setOnMouseDragged(new EventHandler<MouseEvent> () {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffSet);
+                stage.setY(event.getScreenY() - yOffSet);
+            }
+        });
         
         Scene scene = new Scene(root);
         
+        /*
+        *   Set transparent
+        */
+        scene.setFill(Color.TRANSPARENT);  
+        
+        
+        
+        
+        
         stage.setScene(scene);
         stage.show();
+        
+        
     }
 
     /**

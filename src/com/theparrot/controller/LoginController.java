@@ -5,12 +5,14 @@
  */
 package com.theparrot.controller;
 
+import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 
 /**
  *
@@ -19,12 +21,21 @@ import javafx.scene.control.Label;
 public class LoginController implements Initializable {
     
     @FXML
-    private Label label;
+    private JFXButton btn_signin, btn_signup;
+    
+    @FXML
+    private AnchorPane pn_signin, pn_signup;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        if(event.getSource() == btn_signin){
+            pn_signin.toFront();
+        }else{
+            if(event.getSource() == btn_signup){
+                pn_signup.toFront();
+            }
+        }
+        
     }
     
     @Override
