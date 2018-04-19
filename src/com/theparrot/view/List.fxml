@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane  xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theparrot.controller.ListController">
+    <children>
+    <ScrollPane  prefHeight="406.0" prefWidth="810.0" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="22.0">
+        <content>
+            <VBox fx:id="pnl_scroll" prefHeight="404.0" prefWidth="810.0" spacing="20.0" style="-fx-background-color: #fff;">
+                <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                </children></VBox>
+        </content>
+    </ScrollPane>
+    <HBox prefHeight="30.0" prefWidth="810.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="1.0">
+    <children>
+        <Label fx:id="lbl_currentprojects" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Todos os Projetos(10)" textFill="#171717">
+
+        </Label>
+        <Label fx:id="lbl_pending" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Meus Projetos(12)" textFill="#171717">
+
+        </Label>
+        <Label fx:id="lbl_completed" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Projetos Concluidos (2)" textFill="#171717">
+
+        </Label>
+    </children>
+    </HBox>
+</children>
+</AnchorPane>
