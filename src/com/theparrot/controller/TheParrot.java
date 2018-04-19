@@ -27,10 +27,8 @@ public class TheParrot extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Profile.fxml"));
         stage.initStyle(StageStyle.TRANSPARENT);
-        
-        
         
         /*
          * Moving frames
@@ -58,15 +56,8 @@ public class TheParrot extends Application {
         *   Set transparent
         */
         scene.setFill(Color.TRANSPARENT);  
-        
-        
-        
-        
-        
         stage.setScene(scene);
         stage.show();
-        
-        
     }
 
     /**

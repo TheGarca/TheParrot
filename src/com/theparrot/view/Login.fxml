@@ -38,8 +38,8 @@
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXButton layoutX="181.0" layoutY="341.0" text="SignUp" />
-                  <Label layoutX="183.0" layoutY="35.0" text="SignUp" textFill="#795af3">
+                  <JFXButton layoutX="181.0" layoutY="355.0" text="SignUp" />
+                  <Label layoutX="176.0" layoutY="38.0" text="SignUp" textFill="#795af3">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -59,7 +59,7 @@
                      </font>
                   </JFXPasswordField>
                   <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="331.0" text="Button" />
-                  <JFXButton layoutX="186.0" layoutY="305.0" text="SignIn" />
+                  <JFXButton layoutX="186.0" layoutY="355.0" text="SignIn" />
                   <Label layoutX="176.0" layoutY="38.0" text="SignIn" textFill="#7a5cf2">
                      <font>
                         <Font size="21.0" />
