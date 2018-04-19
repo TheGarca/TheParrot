@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theparrot.controller.ListController">
+    <children>
+    <ScrollPane style="-fx-background-color: #fff;" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="41.0">
+        <content>
+            <VBox fx:id="pnl_scroll" prefHeight="404.0" spacing="20.0" style="-fx-background-color: #fff;">
+                <children>
+                    <AnchorPane />
+                </children></VBox>
+        </content>
+    </ScrollPane>
+    <HBox prefHeight="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="1.0">
+    <children>
+        <Label fx:id="lbl_currentprojects" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Todos os Projetos(10)" textFill="#171717">
+
+        </Label>
+        <Label fx:id="lbl_pending" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Meus Projetos(12)" textFill="#171717">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Label>
+        <Label fx:id="lbl_completed" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Projetos Concluidos (2)" textFill="#171717">
+
+        </Label>
+    </children>
+    </HBox>
+</children>
+</AnchorPane>

@@ -4,12 +4,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -28,10 +26,15 @@
                     <Font size="13.0" />
                 </font>
             </Label>
-            <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="EDIT PROFILE" textFill="WHITE">
+            <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="PERFIL" textFill="WHITE">
                 <font>
                     <Font name="System Bold" size="12.0" />
                 </font>
+            </JFXButton>
+            <JFXButton layoutX="856.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#CadastroProjeto" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="NOVO PROJETO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
             </JFXButton>
         </children>
     </Pane>
@@ -48,7 +51,7 @@
                     <Insets top="60.0" />
                 </VBox.margin>
             </Label>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Lista de Projetos" textFill="#5b5858">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OpenList" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Lista de Projetos" textFill="#5b5858">
                 <VBox.margin>
                     <Insets />
                 </VBox.margin>
@@ -66,7 +69,7 @@
                     <Insets left="50.0" />
                 </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Em Andamento" textFill="#5b5858">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OpenList" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Em Andamento" textFill="#5b5858">
                 <VBox.margin>
                     <Insets />
                 </VBox.margin>
@@ -84,24 +87,6 @@
                     <Insets left="50.0" />
                 </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="A Receber" textFill="#5b5858">
-                <font>
-                    <Font size="13.0" />
-                </font>
-                <graphic>
-                    <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/projections.png" />
-                        </image>
-                        <viewport>
-                            <Rectangle2D />
-                        </viewport>
-                    </ImageView>
-                </graphic>
-                <padding>
-                    <Insets left="50.0" />
-                </padding>
-            </JFXButton>
             <Label prefHeight="30.0" prefWidth="252.0" text="Empresa" textFill="#171717">
                 <font>
                     <Font size="13.0" />
@@ -110,21 +95,6 @@
                     <Insets left="40.0" />
                 </padding>
             </Label>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Contratos" textFill="#5b5858">
-                <font>
-                    <Font size="13.0" />
-                </font>
-                <graphic>
-                    <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/icons8_Workflow_64px.png" />
-                        </image>
-                    </ImageView>
-                </graphic>
-                <padding>
-                    <Insets left="50.0" />
-                </padding>
-            </JFXButton>
             <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Pagos" textFill="#5b5858">
                 <font>
                     <Font size="13.0" />
@@ -140,7 +110,7 @@
                     <Insets left="50.0" />
                 </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Meu Time" textFill="#5b5858">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#Time" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Meu Time" textFill="#5b5858">
                 <font>
                     <Font size="13.0" />
                 </font>
@@ -187,38 +157,7 @@
             <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
         </effect>
     </Pane>
-    <ScrollPane layoutX="251.0" layoutY="182.0" prefHeight="406.0" prefWidth="810.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="182.0">
-        <content>
-            <VBox fx:id="pnl_scroll" prefHeight="404.0" prefWidth="810.0" spacing="20.0" style="-fx-background-color: #fff;" />
-        </content>
-    </ScrollPane>
-    <HBox layoutX="251.0" layoutY="145.0" prefHeight="30.0" prefWidth="810.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="1.0">
-        <children>
-            <Label fx:id="lbl_currentprojects" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Todos os Projetos(10)" textFill="#171717">
-                <font>
-                    <Font name="System Bold" size="13.0" />
-                </font>
-                <padding>
-                    <Insets left="40.0" />
-                </padding>
-            </Label>
-            <Label fx:id="lbl_pending" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Meus Projetos(12)" textFill="#171717">
-                <font>
-                    <Font size="13.0" />
-                </font>
-                <padding>
-                    <Insets left="40.0" />
-                </padding>
-            </Label>
-            <Label fx:id="lbl_completed" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="207.0" text="Projetos Concluidos (2)" textFill="#171717">
-                <font>
-                    <Font size="13.0" />
-                </font>
-                <padding>
-                    <Insets left="40.0" />
-                </padding>
-            </Label>
-        </children>
-    </HBox>
+
+      <AnchorPane fx:id="content" prefHeight="436.0" prefWidth="810.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="146.0" />
 </children>
 </AnchorPane>
