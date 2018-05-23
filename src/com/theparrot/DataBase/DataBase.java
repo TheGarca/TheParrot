@@ -1,6 +1,6 @@
-package DataBase;
+package com.theparrot.DataBase;
 
-import Configurations.Configurations;
+import com.theparrot.Configurations.Configurations;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

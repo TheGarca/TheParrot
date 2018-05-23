@@ -1,8 +1,8 @@
-package Model.DAO;
+package com.theparrot.Model.DAO;
 
-import Configurations.ConfigurationsMySQL;
+import com.theparrot.Configurations.ConfigurationsMySQL;
 import Model.Interfaces.ImplementCourse;
-import DataBase.DataBaseGeneric;
+import com.theparrot.DataBase.DataBaseGeneric;
 import Model.Course;
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -2,9 +2,9 @@
 * Créditos: https://github.com/ucuptimposu/mvc-dao-simple-java-swing
 **/
 
-package View;
+package com.theparrot.View;
 
-import Controller.CourseController;
+import com.theparrot.Controller.CourseController;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 

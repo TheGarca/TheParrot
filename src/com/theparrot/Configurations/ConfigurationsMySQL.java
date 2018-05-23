@@ -1,4 +1,4 @@
-package Configurations;
+package com.theparrot.Configurations;
 
 public class ConfigurationsMySQL extends Configurations {
     public ConfigurationsMySQL(){

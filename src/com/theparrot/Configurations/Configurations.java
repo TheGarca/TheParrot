@@ -1,4 +1,4 @@
-package Configurations;
+package com.theparrot.Configurations;
 
 public abstract class Configurations {
     public String TYPE;

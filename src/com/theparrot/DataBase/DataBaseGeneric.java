@@ -1,7 +1,7 @@
 
-package DataBase;
+package com.theparrot.DataBase;
 
-import Configurations.Configurations;
+import com.theparrot.Configurations.Configurations;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Map;
