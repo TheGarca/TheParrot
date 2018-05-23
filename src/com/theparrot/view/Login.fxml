@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="990.0" style="-fx-background-color: rgba(0,0, 0, 0);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theparrot.controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="990.0" style="-fx-background-color: rgba(0,0, 0, 0);" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theparrot.controller.LoginController">
    <children>
       <AnchorPane layoutY="37.0" prefHeight="423.0" prefWidth="990.0" style="-fx-background-color: #fff; -fx-border-radius: 5em;">
          <children>
@@ -40,7 +40,7 @@
                         <Font size="14.0" />
                      </font>
                   </JFXTextField>
-                  <JFXButton layoutX="181.0" layoutY="355.0" text="SignUp" />
+                  <JFXButton layoutX="181.0" layoutY="355.0" onAction="#register" text="SignUp" />
                   <Label layoutX="176.0" layoutY="38.0" text="SignUp" textFill="#795af3">
                      <font>
                         <Font size="21.0" />

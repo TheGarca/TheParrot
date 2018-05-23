@@ -45,6 +45,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void login(ActionEvent event) throws Exception {
+        System.out.println("Evento =>" + event);
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -52,6 +53,21 @@ public class LoginController implements Initializable {
         {
             app_stage.hide(); //optional
             app_stage.setScene(home_page_scene);
+            app_stage.show();
+        }
+        else
+        { }
+    }
+    
+    @FXML
+    private void register(ActionEvent event) throws Exception {
+        Parent register_page_parent = FXMLLoader.load(getClass().getResource("../view/UserRegister.fxml"));
+        Scene register_page_scene = new Scene(register_page_parent);
+        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        if (true)
+        {
+            app_stage.hide(); //optional
+            app_stage.setScene(register_page_scene);
             app_stage.show();
         }
         else
