@@ -2,8 +2,8 @@ package com.theparrot.Controller;
 
 import Model.Course;
 import com.theparrot.Model.DAO.CourseDAO;
-import Model.Interfaces.ImplementCourse;
-import Model.Table.TabelModelCourse;
+import com.theparrot.Model.Interfaces.ImplementCourse;
+import com.theparrot.Model.Table.TabelModelCourse;
 import com.theparrot.View.CoursePanelForm;
 import java.util.List;
 import javax.swing.JOptionPane;

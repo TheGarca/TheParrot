@@ -1,9 +1,9 @@
 package com.theparrot.Model.DAO;
 
 import com.theparrot.Configurations.ConfigurationsMySQL;
-import com.theparrot.Model.Interfaces.ImplementCourse;
+import com.theparrot.Model.Interfaces.ImplementUser;
 import com.theparrot.DataBase.DataBaseGeneric;
-import Model.Course;
+import com.theparrot.Model.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -11,27 +11,27 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CourseDAO extends DataBaseGeneric implements ImplementCourse{
+public class UserDAO extends DataBaseGeneric implements ImplementUser{
     
-    public ArrayList<Course> list;
+    public ArrayList<User> list;
     
-    public CourseDAO(){
-        super(new ConfigurationsMySQL(), "java_course");
+    public UserDAO(){
+        super(new ConfigurationsMySQL(), "java_user");
     }
             
     @Override
-    public void insert(Course course){
+    public void insert(User user){
         Map<Object, Object> mapObj = new HashMap<>();
-        mapObj.put("name", course.getName());
+        mapObj.put("name", user.getName());
         this.genericInsert(mapObj);
     }
 
     @Override
-    public void update(Course course){
+    public void update(User user){
         Map<Object, Object> mapObj = new HashMap<>();
         Map<Object, Object> mapConditions = new HashMap<>();
-        mapObj.put("name", course.getName());
-        mapConditions.put("id", course.getId());
+        mapObj.put("name", user.getName());
+        mapConditions.put("id", user.getId());
         this.genericUpdate(mapObj, mapConditions);
     }
 
@@ -43,15 +43,15 @@ public class CourseDAO extends DataBaseGeneric implements ImplementCourse{
     }
 
     @Override
-    public List<Course> getCourseByName(String name){
+    public List<User> getUserByName(String name){
         this.list = new ArrayList<>();
         try {
             ResultSet rs = this.getLike("name", name);
             while (rs.next()) { 
-                Course course = new Course();
-                course.setId(rs.getInt(1));
-                course.setName(rs.getString("name"));
-                list.add(course);
+                User user = new User();
+                user.setId(rs.getInt(1));
+                user.setName(rs.getString("name"));
+                list.add(user);
             }
             return list;
         } catch (SQLException ex){
@@ -61,15 +61,15 @@ public class CourseDAO extends DataBaseGeneric implements ImplementCourse{
     }
 
     @Override
-    public List<Course> getAllCourse(){
+    public List<User> getAllUser(){
         list = new ArrayList<>();
         ResultSet rs = this.getAll();
         try {
             while(rs.next()){
-                Course course = new Course();
-                course.setId(rs.getInt(1));
-                course.setName(rs.getString("name"));
-                list.add(course);
+                User user = new User();
+                user.setId(rs.getInt(1));
+                user.setName(rs.getString("name"));
+                list.add(user);
             }
             return list;
         } catch (SQLException ex) {
@@ -79,13 +79,13 @@ public class CourseDAO extends DataBaseGeneric implements ImplementCourse{
     }
     
     @Override
-    public Course getOneCourse(int id){
+    public User getOneUser(int id){
         ResultSet rs = this.getOne(id);
-        Course course = new Course();
+        User user = new User();
         try {
-            course.setId(rs.getInt(1));
-            course.setName(rs.getString("name"));
-            return course;
+            user.setId(rs.getInt(1));
+            user.setName(rs.getString("name"));
+            return user;
         } catch (SQLException ex) {
             System.out.println("Erro ao retornar um curso pelo id: " + ex.getMessage());
         }

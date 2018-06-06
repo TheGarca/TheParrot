@@ -1,4 +1,4 @@
-package Model.Interfaces;
+package com.theparrot.Model.Interfaces;
 
 import Model.Course;
 import java.util.List;

@@ -11,37 +11,37 @@ package com.theparrot.Model;
  */
 public class User {
    
-    private String nome;
-    private String empresa;
+    private String name;
+    private String company;
     private String email;
-    private String telefone;
-    private String senha;
+    private String foneNumber;
+    private String password;
 
     public User() {
     }
 
-    public User(String nome, String empresa, String email, String telefone, String senha) {
-        this.nome = nome;
-        this.empresa = empresa;
+    public User(String name, String company, String email, String foneNumber, String password) {
+        this.name = name;
+        this.company = company;
         this.email = email;
-        this.telefone = telefone;
-        this.senha = senha;
+        this.foneNumber = foneNumber;
+        this.password = password;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getCompany() {
+        return company;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
     public String getEmail() {
@@ -52,26 +52,23 @@ public class User {
         this.email = email;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getFoneNumber() {
+        return foneNumber;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setFoneNumber(String foneNumber) {
+        this.foneNumber = foneNumber;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" + "nome=" + nome + ", empresa=" + empresa + ", email=" + email + ", telefone=" + telefone + ", senha=" + senha + '}';
-    }
+    
     
     
     
