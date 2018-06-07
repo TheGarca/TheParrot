@@ -1,6 +1,6 @@
 package com.theparrot.Model.Interfaces;
 
-import Model.Course;
+import com.theparrot.Model.Course;
 import java.util.List;
 
 public interface ImplementCourse{

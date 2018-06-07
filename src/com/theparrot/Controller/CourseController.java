@@ -1,6 +1,6 @@
 package com.theparrot.Controller;
 
-import Model.Course;
+import com.theparrot.Model.Course;
 import com.theparrot.Model.DAO.CourseDAO;
 import com.theparrot.Model.Interfaces.ImplementCourse;
 import com.theparrot.Model.Table.TabelModelCourse;

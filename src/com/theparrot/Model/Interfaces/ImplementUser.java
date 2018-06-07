@@ -18,12 +18,6 @@ public interface ImplementUser {
     
     public void update(User user);
     
-    public void delete(int id);
-    
-    public List<User> getUserByName(String name);
-    
-    public List<User> getAllUser();
-    
     public User getOneUser(int id);
     
 }

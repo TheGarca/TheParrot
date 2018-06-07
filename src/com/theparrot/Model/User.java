@@ -10,7 +10,7 @@ package com.theparrot.Model;
  * @author gustavomiara
  */
 public class User {
-   
+    private int id;
     private String name;
     private String company;
     private String email;
@@ -20,7 +20,8 @@ public class User {
     public User() {
     }
 
-    public User(String name, String company, String email, String foneNumber, String password) {
+    public User(int id, String name, String company, String email, String foneNumber, String password) {
+        this.id = id;
         this.name = name;
         this.company = company;
         this.email = email;
@@ -28,6 +29,14 @@ public class User {
         this.password = password;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getName() {
         return name;
     }
@@ -66,6 +75,11 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", name=" + name + ", company=" + company + ", email=" + email + ", foneNumber=" + foneNumber + ", password=" + password + '}';
     }
 
     

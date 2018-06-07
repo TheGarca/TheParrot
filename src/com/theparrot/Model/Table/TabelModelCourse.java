@@ -1,6 +1,6 @@
-package Model.Table;
+package com.theparrot.Model.Table;
 
-import Model.Course;
+import com.theparrot.Model.Course;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 

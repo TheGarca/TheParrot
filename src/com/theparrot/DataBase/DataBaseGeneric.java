@@ -23,8 +23,12 @@ public class DataBaseGeneric extends DataBase {
     }
     
     public void checkConnection(){
+        System.out.println("checkConnection");
         if(!this.connected){
+            System.out.println("Conect database");
             this.connect();
+        }else{
+            System.out.println("No conect database");
         }
     }
     
@@ -58,7 +62,9 @@ public class DataBaseGeneric extends DataBase {
     }
     
     public void genericInsert(Map<Object, Object> mapObj){
+        System.out.println("genericInsert");
         this.checkConnection();
+        System.out.println("genericInsert");
         if(!this.checkEmptyTable())
             return;
         
@@ -100,6 +106,7 @@ public class DataBaseGeneric extends DataBase {
         sql = new StringBuilder(sql.subSequence(0, sql.length() - 1));
         sql.append(")");
 
+        System.err.println("SQL insert: " + sql.toString());
         this.execute(sql.toString(), list);
     }
     

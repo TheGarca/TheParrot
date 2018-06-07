@@ -3,7 +3,7 @@ package com.theparrot.Model.DAO;
 import com.theparrot.Configurations.ConfigurationsMySQL;
 import com.theparrot.Model.Interfaces.ImplementCourse;
 import com.theparrot.DataBase.DataBaseGeneric;
-import Model.Course;
+import com.theparrot.Model.Course;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;

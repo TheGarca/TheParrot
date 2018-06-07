@@ -7,7 +7,7 @@ public class ConfigurationsMySQL extends Configurations {
         super.USER = "root";
         super.PASS = "";
         super.PORT = "3306";
-        super.BASE = "utfpr_tests";
+        super.BASE = "theparrot";
         super.DRIV = "com.mysql.jdbc.Driver";
     }
 }
