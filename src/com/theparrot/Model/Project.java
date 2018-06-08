@@ -8,7 +8,7 @@ public class Project{
     private String dataFinal;
     private String descricao;
     private int empresaId;
-    private Usuario empresa;
+    private User empresa;
     
 
     public int getId() {
@@ -58,10 +58,10 @@ public class Project{
         this.empresaId = empresaId;
     }
 
-    public void getEmpresa() {
+    public User getEmpresa() {
         return this.empresa;
     }
-    public void setEmpresa(Usuario empresa) {
+    public void setEmpresa(User empresa) {
         this.empresa = empresa;
     }
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="399.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="399.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
 <children>
     <Pane layoutX="29.0" layoutY="22.0" prefHeight="338.0" prefWidth="896.0" style="-fx-background-color: #fff;">
         <children>
@@ -29,32 +29,27 @@
                     <Font size="14.0" />
                 </font>
             </Label>
-            <Label layoutX="51.0" layoutY="186.0" text="LOCAL" textFill="#aeacac">
-                <font>
-                    <Font size="14.0" />
-                </font>
-            </Label>
             <Label layoutX="279.0" layoutY="113.0" text="VALOR TOTAL" textFill="#aeacac">
                 <font>
                     <Font size="14.0" />
                 </font>
             </Label>
-            <Label layoutX="279.0" layoutY="186.0" text="EMPRESA" textFill="#aeacac">
+            <Label layoutX="54.0" layoutY="190.0" text="EMPRESA" textFill="#aeacac">
                 <font>
                     <Font size="14.0" />
                 </font>
             </Label>
-            <Label layoutX="58.0" layoutY="139.0" fx:id="cliente" text="Eduardo Queiroz" textFill="#4d4c4c">
+            <Label fx:id="cliente" layoutX="58.0" layoutY="139.0" text="Eduardo Queiroz" textFill="#4d4c4c">
                 <font>
                     <Font size="13.0" />
                 </font>
             </Label>
-            <Label layoutX="287.0" layoutY="139.0" fx:id="valor"  text="R$ 10.000,00 " textFill="#4d4c4c">
+            <Label fx:id="valor" layoutX="287.0" layoutY="139.0" text="R$ 10.000,00 " textFill="#4d4c4c">
                 <font>
                     <Font size="13.0" />
                 </font>
             </Label>
-            <Label layoutX="287.0" layoutY="211.0" fx:id="empresa" text="Microsoft co." textFill="#4d4c4c">
+            <Label fx:id="empresa" layoutX="62.0" layoutY="215.0" text="Microsoft co." textFill="#4d4c4c">
                 <font>
                     <Font size="13.0" />
                 </font>

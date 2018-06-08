@@ -3,13 +3,14 @@ package com.theparrot.Model.DAO;
 import com.theparrot.Configurations.ConfigurationsMySQL;
 import com.theparrot.Model.Interfaces.ImplementUser;
 import com.theparrot.DataBase.DataBaseGeneric;
+import com.theparrot.Model.Course;
 import com.theparrot.Model.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
 
 public class UserDAO extends DataBaseGeneric implements ImplementUser {
 
@@ -72,6 +73,27 @@ public class UserDAO extends DataBaseGeneric implements ImplementUser {
             return user;
         } catch (SQLException ex) {
             System.out.println("Erro ao retornar um curso pelo id: " + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public User getUserByName(String name) {
+        this.list = new ArrayList<>();
+        try {
+            ResultSet rs = this.getLike("name", name);
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt(1));
+                user.setName(rs.getString("name"));
+                user.setCompany(rs.getString("company"));
+                user.setEmail(rs.getString("email"));
+                user.setFoneNumber(rs.getString("foneNumber"));
+                user.setPassword(rs.getString("password"));
+                return user;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Houve um erro ao obter um curso: " + ex.getMessage());
         }
         return null;
     }

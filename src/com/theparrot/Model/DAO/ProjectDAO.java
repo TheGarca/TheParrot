@@ -3,6 +3,7 @@ package com.theparrot.Model.DAO;
 import com.theparrot.Configurations.ConfigurationsMySQL;
 import com.theparrot.Model.Interfaces.ImplementProject;
 import com.theparrot.DataBase.DataBaseGeneric;
+import com.theparrot.Model.Interfaces.ImplementUser;
 import com.theparrot.Model.Project;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,6 +15,7 @@ import java.util.Map;
 public class ProjectDAO extends DataBaseGeneric implements ImplementProject{
     
     public ArrayList<Project> list;
+    private final ImplementUser implementUser = new UserDAO();
     
     public ProjectDAO(){
         super(new ConfigurationsMySQL(), "java_Project");
@@ -43,7 +45,8 @@ public class ProjectDAO extends DataBaseGeneric implements ImplementProject{
                 Project.setValor(rs.getString("valor"));
                 Project.setDescricao(rs.getString("descricao"));
                 Project.setDataFinal(rs.getString("dataFinal"));
-                Project.setEmpresa(rs.getString("empresa"));
+                Project.setEmpresa(implementUser.getOneUser((rs.getInt("empresaId"))));
+                Project.setEmpresaId(rs.getInt("empresaId"));
                 list.add(Project);
             }
             return list;

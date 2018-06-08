@@ -1,5 +1,6 @@
 package com.theparrot.controller;
 
+import com.theparrot.Model.DAO.ProjectDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,12 +10,16 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import com.theparrot.Model.Interfaces.ImplementProject;
+import com.theparrot.Model.Project;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
 
 public class ListController implements Initializable {
 
@@ -38,22 +43,27 @@ public class ListController implements Initializable {
         refreshNodes();
     }
 
-    private void refreshNodes()
-    {
-        Project project = implementProject.getAllProject();
+    private void refreshNodes() {
+        List<Project> project = implementProject.getAllProject();
         pnl_scroll.getChildren().clear();
 
-        Node[] nodes = new  Node[project.lenght()];
+//        Node[] nodes = new Node[project.size()];
 
-        for(int i = 0; i<10; i++)
-        {
+        for (int i = 0; i < project.size(); i++) {
             try {
-                nodes[i] = (Node) FXMLLoader.load(getClass().getResource("../view/Item.fxml"));
-                nodes[i].cliente.setText(project.getEmpresa().company);
-                nodes[i].valor.setText(project.getValor());
-                nodes[i].local.setText(project.getEmpresa().company);
-                
-                pnl_scroll.getChildren().add(nodes[i]);
+//                nodes[i] = (Node) FXMLLoader.load(getClass().getResource("../view/Item.fxml"));
+                Stage stage = new Stage();
+                FXMLLoader loader = new FXMLLoader();
+                Parent root = loader.load(getClass().getResource("../view/Item.fxml").openStream());
+                ItemController cont = (ItemController) loader.getController();
+                cont.setCliente(project.get(i).getEmpresa().getName());
+                cont.setDescricao(project.get(i).getDescricao());
+                cont.setEmpresa(project.get(i).getEmpresa().getCompany());
+                cont.setValor(project.get(i).getValor());
+              
+//                nodes[i] = root;
+
+                pnl_scroll.getChildren().add(root);
 
             } catch (IOException ex) {
                 Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);

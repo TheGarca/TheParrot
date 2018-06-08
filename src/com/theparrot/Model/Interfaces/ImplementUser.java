@@ -20,4 +20,6 @@ public interface ImplementUser {
     
     public User getOneUser(int id);
     
+    public User getUserByName(String name);
+    
 }
