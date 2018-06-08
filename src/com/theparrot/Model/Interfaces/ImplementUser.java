@@ -22,4 +22,6 @@ public interface ImplementUser {
     
     public User getUserByName(String name);
     
+    public void login(String name);
+    
 }

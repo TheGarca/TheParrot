@@ -6,6 +6,10 @@
 package com.theparrot.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
+import com.theparrot.Model.DAO.UserDAO;
+import com.theparrot.Model.Interfaces.ImplementUser;
+import com.theparrot.Model.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -25,6 +29,8 @@ import javafx.stage.Stage;
  */
 public class LoginController implements Initializable {
     
+    private final ImplementUser implementUser = new UserDAO();
+    
     @FXML
     private JFXButton btn_signin, btn_signup;
     
@@ -32,6 +38,9 @@ public class LoginController implements Initializable {
     private AnchorPane pn_signin, pn_signup;
     
     @FXML
+    private JFXTextField name;
+    
+    @FXML 
     private void handleButtonAction(ActionEvent event) {
         if(event.getSource() == btn_signin){
             pn_signin.toFront();
@@ -49,7 +58,9 @@ public class LoginController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        if (true)
+        
+        implementUser.login(name.getText());
+        if (UserDAO.user.getName() != "")
         {
             app_stage.hide(); //optional
             app_stage.setScene(home_page_scene);

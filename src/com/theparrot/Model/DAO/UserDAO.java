@@ -15,6 +15,7 @@ import java.util.Map;
 public class UserDAO extends DataBaseGeneric implements ImplementUser {
 
     public ArrayList<User> list;
+    public static User user = new User();
 
     public UserDAO() {
         super(new ConfigurationsMySQL(), "usuario");
@@ -96,5 +97,10 @@ public class UserDAO extends DataBaseGeneric implements ImplementUser {
             System.out.println("Houve um erro ao obter um curso: " + ex.getMessage());
         }
         return null;
+    }
+    
+    @Override
+    public void login(String name){
+        user = getUserByName(name);
     }
 }

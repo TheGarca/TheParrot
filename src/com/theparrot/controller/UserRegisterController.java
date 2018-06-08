@@ -31,8 +31,8 @@ import javafx.stage.Stage;
 public class UserRegisterController implements Initializable {
 
     private final ImplementUser implementUser = new UserDAO();
-    
-    public UserRegisterController(){
+
+    public UserRegisterController() {
         System.err.println("Contrutor");
     }
 
@@ -55,18 +55,19 @@ public class UserRegisterController implements Initializable {
         boolean res = this.insert();
         System.out.println("Resultado do inserte: " + res);
 
-//        System.out.println("Evento =>" + event);
-//        Parent home_page_parent = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
-//        Scene home_page_scene = new Scene(home_page_parent);
-//        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        if (true)
-//        {
-//            app_stage.hide(); //optional
-//            app_stage.setScene(home_page_scene);
-//            app_stage.show();
-//        }
-//        else
-//        { }
+        if (res) {
+            System.out.println("Evento =>" + event);
+            Parent home_page_parent = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
+            Scene home_page_scene = new Scene(home_page_parent);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            if (true) {
+                app_stage.hide(); //optional
+                app_stage.setScene(home_page_scene);
+                app_stage.show();
+            } else {
+            }
+        }
+
     }
 
     private boolean insert() {

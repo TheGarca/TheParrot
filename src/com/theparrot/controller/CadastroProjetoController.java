@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import com.theparrot.Model.DAO.ProjectDAO;
+import com.theparrot.Model.DAO.UserDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import com.theparrot.Model.Interfaces.ImplementProject;
@@ -46,7 +47,7 @@ public class CadastroProjetoController implements Initializable {
             project.setDataFinal(Final.getValue().toString());
             project.setDescricao(Descricao.getText());      
             //Id do usuário, descobri da onde pegar
-            project.setEmpresaId(0);
+            project.setEmpresaId(UserDAO.user.getId());
             implementProject.insert(project);
             return true;
         } catch (Exception e) {
