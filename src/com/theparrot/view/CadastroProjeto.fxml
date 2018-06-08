@@ -10,14 +10,14 @@
 <AnchorPane layoutX="120.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.theparrot.controller.CadastroProjetoController">
    <children>
       <Label layoutX="33.0" layoutY="29.0" text="Cadastro de Projeto" />
-      <JFXButton layoutX="477.0" layoutY="339.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="97.0" text="Cadastrar" />
-      <JFXDatePicker layoutX="407.0" layoutY="103.0" />
+      <JFXButton fx:id="btn_salvar" layoutX="477.0" layoutY="339.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="97.0" text="Cadastrar" />
+      <JFXDatePicker fx:id="Final" layoutX="407.0" layoutY="103.0" />
       <Label layoutX="407.0" layoutY="75.0" text="Prazo Final" />
       <Label layoutX="33.0" layoutY="75.0" text="Nome " />
-      <JFXTextField layoutX="33.0" layoutY="103.0" />
+      <JFXTextField fx:id="Nome" layoutX="33.0" layoutY="103.0" />
       <Label layoutX="212.0" layoutY="75.0" text="Valor Projeto" />
-      <JFXTextField layoutX="215.0" layoutY="103.0" />
+      <JFXTextField fx:id="Valor" layoutX="215.0" layoutY="103.0" />
       <Label layoutX="37.0" layoutY="172.0" text="Descrição" />
-      <JFXTextArea layoutX="35.0" layoutY="200.0" prefHeight="110.0" prefWidth="530.0" />
+      <JFXTextArea fx:id="Descricao" layoutX="35.0" layoutY="200.0" prefHeight="110.0" prefWidth="530.0" />
    </children>
 </AnchorPane>
