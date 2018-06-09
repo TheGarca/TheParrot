@@ -18,7 +18,7 @@ public class ProjectDAO extends DataBaseGeneric implements ImplementProject{
     private final ImplementUser implementUser = new UserDAO();
     
     public ProjectDAO(){
-        super(new ConfigurationsMySQL(), "java_Project");
+        super(new ConfigurationsMySQL(), "project");
     }
             
     @Override
@@ -26,7 +26,7 @@ public class ProjectDAO extends DataBaseGeneric implements ImplementProject{
         Map<Object, Object> mapObj = new HashMap<>();
         mapObj.put("name", Project.getName());
         mapObj.put("valor", Project.getValor());
-        mapObj.put("descricao", Project.getDescricao());
+        mapObj.put("detalhes", Project.getDescricao());
         mapObj.put("dataFinal", Project.getDataFinal());
         mapObj.put("empresaId", Project.getEmpresaId());
         this.genericInsert(mapObj);
@@ -43,7 +43,7 @@ public class ProjectDAO extends DataBaseGeneric implements ImplementProject{
                 Project.setId(rs.getInt(1));
                 Project.setName(rs.getString("name"));
                 Project.setValor(rs.getString("valor"));
-                Project.setDescricao(rs.getString("descricao"));
+                Project.setDescricao(rs.getString("detalhes"));
                 Project.setDataFinal(rs.getString("dataFinal"));
                 Project.setEmpresa(implementUser.getOneUser((rs.getInt("empresaId"))));
                 Project.setEmpresaId(rs.getInt("empresaId"));

@@ -8,7 +8,6 @@ package com.theparrot.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXPasswordField;
-import com.theparrot.Model.DAO.CourseDAO;
 import com.theparrot.Model.DAO.UserDAO;
 import com.theparrot.Model.Interfaces.ImplementUser;
 import com.theparrot.Model.User;

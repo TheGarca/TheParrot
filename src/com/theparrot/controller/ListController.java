@@ -4,10 +4,8 @@ import com.theparrot.Model.DAO.ProjectDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import com.theparrot.Model.Interfaces.ImplementProject;
 import com.theparrot.Model.Project;
@@ -47,11 +45,9 @@ public class ListController implements Initializable {
         List<Project> project = implementProject.getAllProject();
         pnl_scroll.getChildren().clear();
 
-//        Node[] nodes = new Node[project.size()];
 
         for (int i = 0; i < project.size(); i++) {
             try {
-//                nodes[i] = (Node) FXMLLoader.load(getClass().getResource("../view/Item.fxml"));
                 Stage stage = new Stage();
                 FXMLLoader loader = new FXMLLoader();
                 Parent root = loader.load(getClass().getResource("../view/Item.fxml").openStream());
@@ -60,8 +56,7 @@ public class ListController implements Initializable {
                 cont.setDescricao(project.get(i).getDescricao());
                 cont.setEmpresa(project.get(i).getEmpresa().getCompany());
                 cont.setValor(project.get(i).getValor());
-              
-//                nodes[i] = root;
+             
 
                 pnl_scroll.getChildren().add(root);
 

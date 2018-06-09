@@ -76,7 +76,7 @@
             </Label>
             <Pane layoutY="269.0" prefHeight="70.0" prefWidth="896.0" style="-fx-background-color: #F0F0F0;">
                 <children>
-                    <Label layoutX="61.0" layoutY="26.0" text="Detalhes do Projeto" textFill="#504df2">
+                    <Label fx:id="descricao" layoutX="61.0" layoutY="26.0" text="Detalhes do Projeto" textFill="#504df2">
                         <font>
                             <Font size="13.0" />
                         </font>

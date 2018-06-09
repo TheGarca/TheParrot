@@ -3,13 +3,11 @@ package com.theparrot.Model.DAO;
 import com.theparrot.Configurations.ConfigurationsMySQL;
 import com.theparrot.Model.Interfaces.ImplementUser;
 import com.theparrot.DataBase.DataBaseGeneric;
-import com.theparrot.Model.Course;
 import com.theparrot.Model.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class UserDAO extends DataBaseGeneric implements ImplementUser {
