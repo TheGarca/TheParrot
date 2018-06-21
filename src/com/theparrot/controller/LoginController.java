@@ -57,11 +57,14 @@ public class LoginController implements Initializable {
         System.out.println("Evento =>" + event);
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("../view/Dashboard.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
-        Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
         
         implementUser.login(name.getText());
+        System.out.println("Nome" + UserDAO.user.getName());
         if (UserDAO.user.getName() != "")
         {
+            System.out.println("Nome" + UserDAO.user.getName());
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.hide(); //optional
             app_stage.setScene(home_page_scene);
             app_stage.show();

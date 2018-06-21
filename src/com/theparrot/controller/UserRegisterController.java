@@ -36,7 +36,7 @@ public class UserRegisterController implements Initializable {
     }
 
     @FXML
-    private JFXButton btn_salvar, btn_cancelar;
+    private JFXButton btn_edit;
 
     @FXML
     private JFXTextField txt_name, txt_company, txt_email, txt_fone;

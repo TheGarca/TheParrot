@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 
@@ -43,22 +44,22 @@ public class ListController implements Initializable {
 
     private void refreshNodes() {
         List<Project> project = implementProject.getAllProject();
+        
         pnl_scroll.getChildren().clear();
-
+        
+        Node [] nodes = new  Node[project.size()];
 
         for (int i = 0; i < project.size(); i++) {
             try {
-                Stage stage = new Stage();
-                FXMLLoader loader = new FXMLLoader();
-                Parent root = loader.load(getClass().getResource("../view/Item.fxml").openStream());
-                ItemController cont = (ItemController) loader.getController();
-                cont.setCliente(project.get(i).getEmpresa().getName());
-                cont.setDescricao(project.get(i).getDescricao());
-                cont.setEmpresa(project.get(i).getEmpresa().getCompany());
-                cont.setValor(project.get(i).getValor());
-             
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Item.fxml"));
+                nodes[i] = (Node) loader.load();
+                ItemController controller = (ItemController) loader.getController();
+                controller.setCliente(project.get(i).getEmpresa().getName());
+                controller.setDescricao(project.get(i).getDescricao());
+                controller.setEmpresa(project.get(i).getEmpresa().getCompany());
+                controller.setValor(project.get(i).getValor());
 
-                pnl_scroll.getChildren().add(root);
+                pnl_scroll.getChildren().add(nodes[i]);
 
             } catch (IOException ex) {
                 Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);

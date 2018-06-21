@@ -13,41 +13,45 @@ import javafx.scene.control.Label;
 
 public class ItemController implements Initializable {
 
-    @FXML private Label valor;
-    @FXML private Label empresa;
-    @FXML private Label cliente;
-    @FXML private Label descricao;
+    @FXML 
+    private Label valor;
+    @FXML 
+    private Label empresa;
+    @FXML 
+    private Label cliente;
+    @FXML 
+    private Label descricao;
 
     public Label getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
-        this.valor.setText(valor);
+    public void setValor (String vl) {
+        valor.setText(vl);
     }
 
     public Label getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa.setText(empresa);
+    public void setEmpresa(String emp) {
+        empresa.setText(emp);
     }
 
     public Label getCliente() {
         return cliente;
     }
 
-    public void setCliente(String cliente) {
-        this.cliente.setText(cliente);
+    public void setCliente(String cli) {
+        cliente.setText(cli);
     }
 
     public Label getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao.setText(descricao);
+    public void setDescricao(String desc) {
+        descricao.setText(desc);
     }
     
     @Override

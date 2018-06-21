@@ -8,9 +8,9 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="TheParrot.jar" size="117436" download="eager" />
+    <jar href="TheParrot.jar" size="118309" download="eager" />
     <jar href="lib/fontawesomefx-8.9.jar" size="571068" download="eager" />
-    <jar href="lib/gson-2.8.2.jar" size="232932" download="eager" />
+    <jar href="lib/jasperreports-6.6.0.jar" size="5534555" download="eager" />
     <jar href="lib/jfoenix-8.0.1.jar" size="2405715" download="eager" />
     <jar href="lib/jfoenix-9.0.1.jar" size="2143605" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.46.jar" size="1004838" download="eager" />

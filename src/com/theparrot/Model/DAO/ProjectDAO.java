@@ -51,7 +51,7 @@ public class ProjectDAO extends DataBaseGeneric implements ImplementProject{
             }
             return list;
         } catch (SQLException ex) {
-            System.out.println("Erro ao retornar um curso pelo nome: " + ex.getMessage());
+            System.out.println("Erro ao retornar um project pelo nome: " + ex.getMessage());
         }
         return null;
     }
